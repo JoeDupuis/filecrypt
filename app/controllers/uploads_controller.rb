@@ -2,7 +2,7 @@ class UploadsController < ApplicationController
   before_action :set_upload, only: %i[ show edit update destroy ]
 
   def index
-    @uploads = Upload.all
+    @uploads = Upload.order(created_at: :desc).all
   end
 
   def show
@@ -56,6 +56,6 @@ class UploadsController < ApplicationController
     end
 
     def upload_params
-      params.fetch(:upload, {})
+      params.expect(upload: [:file])
     end
 end

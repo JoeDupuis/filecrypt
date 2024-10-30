@@ -4,6 +4,8 @@
 
 <h1>Uploads</h1>
 
+<%= link_to "New upload", new_upload_path %>
+
 <div id="uploads">
   <% @uploads.each do |upload| %>
     <%= render upload %>
