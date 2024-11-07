@@ -12,5 +12,5 @@ with pkgs; {
   ];
 
   languages.ruby.enable = true;
-  languages.ruby.version = "3.3.5";
+  languages.ruby.versionFile = ./.ruby-version;
 }
