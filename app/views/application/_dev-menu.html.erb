@@ -1,0 +1,8 @@
+<% if Rails.env.development?  %>
+  <ul class="dev-menu">
+    <li><%= button_to "Dev sign in", session_path, method: :post, params: {email_address: 'test@test', password: 'qweqwe'} %></li>
+    <li><%= link_to :routes, "/rails/info/routes" %></li>
+    <li><%= link_to :jobs, "/jobs" %></li>
+    <li><%= link_to :mailers, "/rails/mailers" %></li>
+  </ul>
+<% end %>
