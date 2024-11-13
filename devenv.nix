@@ -9,6 +9,12 @@ with pkgs; {
     git
     libyaml
     sqlite-interactive
+    vips
+    imagemagick
+    ffmpeg
+    openssl
+    poppler
+    poppler_utils
   ];
 
   languages.ruby.enable = true;
