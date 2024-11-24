@@ -2,6 +2,8 @@
 
 <%= render @upload %>
 
+<button data-controller="clipboard" data-action="clipboard#copy" data-clipboard-url-value="<%= full_url_for(@upload.file) %>">Copy url</button>
+
 <div>
   <%= link_to "Back to uploads", uploads_path %>
   <%= link_to "View attachment", @upload.file %>
