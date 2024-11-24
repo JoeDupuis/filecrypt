@@ -1,4 +1,4 @@
-<%= form_with(model: upload) do |form| %>
+<%= form_with(model: upload, data: {controller: "file-upload-link"}) do |form| %>
   <% if upload.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :file %>
-    <%= form.file_field :file %>
+    <%= form.file_field :file, data: {controller: 'autoclick', file_upload_link_target: 'filePicker', action: 'file-upload-link#submit'} %>
   </div>
 
   <div>
