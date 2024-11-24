@@ -4,7 +4,9 @@
 
 <h1>Uploads</h1>
 
-<%= link_to "New upload", new_upload_path %>
+<div>
+  <%= link_to "New upload", new_upload_path, class: :button %>
+</div>
 
 <div id="uploads">
   <% @uploads.each do |upload| %>
@@ -12,7 +14,10 @@
     <p>
       <%= link_to "Show this upload", upload %>
     </p>
+    <hr />
   <% end %>
 </div>
 
-<%= link_to "New upload", new_upload_path %>
+<div>
+  <%= link_to "New upload", new_upload_path, class: :button %>
+</div>

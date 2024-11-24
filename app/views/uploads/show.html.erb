@@ -3,9 +3,7 @@
 <%= render @upload %>
 
 <div>
-  <%= link_to "Edit this upload", edit_upload_path(@upload) %> |
   <%= link_to "Back to uploads", uploads_path %>
   <%= link_to "View attachment", @upload.file %>
-
   <%= button_to "Destroy this upload", @upload, method: :delete %>
 </div>
