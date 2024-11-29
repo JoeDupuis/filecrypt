@@ -2,7 +2,7 @@
 service: filecrypt
 
 # Name of the container image.
-image: filecrypt/filecrypt
+image: joedupuis/filecrypt
 
 # Deploy to these servers.
 servers:
