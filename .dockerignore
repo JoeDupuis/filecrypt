@@ -45,3 +45,10 @@
 # Ignore Docker-related files
 /.dockerignore
 /Dockerfile*
+
+# Devenv
+/.direnv
+/.envrc
+.devenv*
+devenv.local.nix
+vendor/bundle
