@@ -61,3 +61,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+########
+group :test do
+  gem "launchy"
+end
+
+gem "mission_control-jobs"
