@@ -10,4 +10,4 @@
 
 return unless Rails.env.development?
 
-User.create! email_address: "test@test", password: "qweqwe"
+User.create! email_address: "test@test", password: "qweqwe", admin: true
