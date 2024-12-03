@@ -92,14 +92,6 @@ builder:
 #   user: app
 
 # Use accessory services (secrets come from .kamal/secrets).
-accessories:
-  cloudflared:
-    host: filecrypt
-    image: cloudflare/cloudflared:latest
-    cmd: tunnel --no-autoupdate run
-    env:
-      secret:
-        - TUNNEL_TOKEN
 # accessories:
 #   db:
 #     image: mysql:8.0
