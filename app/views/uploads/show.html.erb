@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @upload %>
+<%= render @upload, size: 800 %>
 
 <button data-controller="clipboard" data-action="clipboard#copy" data-clipboard-url-value="<%= full_url_for(@upload.file) %>">Copy url</button>
 

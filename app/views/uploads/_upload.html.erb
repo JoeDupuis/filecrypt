@@ -1,7 +1,7 @@
 <div id="<%= dom_id upload %>">
   <div>
     <% if upload.file.representable? %>
-      <%= image_tag upload.file.representation(resize_to_limit: [100, 100]) %>
+      <%= image_tag upload.file.representation(resize_to_limit: [size, size]) %>
     <% end %>
   </div>
   <p><%= upload.file.filename %> -   <%= upload.created_at %></p>

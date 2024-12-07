@@ -10,7 +10,7 @@
 
 <div id="uploads">
   <% @uploads.each do |upload| %>
-    <%= render upload %>
+    <%= render upload, size: 200 %>
     <p>
       <%= link_to "Show this upload", upload %>
     </p>
