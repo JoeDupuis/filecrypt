@@ -1,4 +1,8 @@
 class Current < ActiveSupport::CurrentAttributes
   attribute :session
-  delegate :user, to: :session, allow_nil: true
+  attribute :api_key
+
+  def user
+    session&.user || api_key&.bearer
+  end
 end

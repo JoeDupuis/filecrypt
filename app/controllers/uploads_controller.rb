@@ -18,14 +18,10 @@ class UploadsController < ApplicationController
   def create
     @upload = Current.user.uploads.new(upload_params)
 
-    respond_to do |format|
-      if @upload.save
-        format.html { redirect_to @upload, notice: "Upload was successfully created." }
-        format.json { render :show, status: :created, location: @upload }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @upload.errors, status: :unprocessable_entity }
-      end
+    if @upload.save
+      redirect_to @upload, notice: "Upload was successfully created."
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
