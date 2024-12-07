@@ -2,21 +2,21 @@ class UploadsController < ApplicationController
   before_action :set_upload, only: %i[ show edit update destroy ]
 
   def index
-    @uploads = Upload.order(created_at: :desc).all
+    @uploads = Current.user.uploads.order(created_at: :desc).all
   end
 
   def show
   end
 
   def new
-    @upload = Upload.new
+    @upload = Current.user.uploads.new
   end
 
   def edit
   end
 
   def create
-    @upload = Upload.new(upload_params)
+    @upload = Current.user.uploads.new(upload_params)
 
     respond_to do |format|
       if @upload.save
@@ -52,7 +52,7 @@ class UploadsController < ApplicationController
 
   private
     def set_upload
-      @upload = Upload.find(params.expect(:id))
+      @upload = Current.user.uploads.find(params.expect(:id))
     end
 
     def upload_params
