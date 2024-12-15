@@ -1,2 +1,2 @@
 json.extract! upload, :id, :created_at, :updated_at
-json.url full_url_for(upload.file)
+json.url rails_blob_url(upload.file, disposition: :inline)

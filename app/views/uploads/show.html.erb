@@ -2,10 +2,10 @@
 
 <%= render @upload, size: 800 %>
 
-<button data-controller="clipboard" data-action="clipboard#copy" data-clipboard-url-value="<%= full_url_for(@upload.file) %>">Copy url</button>
+<button data-controller="clipboard" data-action="clipboard#copy" data-clipboard-url-value="<%= rails_blob_url(@upload.file, disposition: :inline) %>">Copy url</button>
 
 <div>
   <%= link_to "Back to uploads", uploads_path %>
-  <%= link_to "View attachment", @upload.file %>
+  <%= link_to "View attachment", rails_blob_path(@upload.file, disposition: :inline), target: :_blank %>
   <%= button_to "Destroy this upload", @upload, method: :delete %>
 </div>
